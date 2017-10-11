@@ -39,10 +39,12 @@ function kairosDetect(params){
   request.post(options, function (error, response, body) {
     console.log('error:', error);
     console.log('statusCode:', response && response.statusCode);
-    if (body.images[0]) {
+    if (typeof body.images[0] != 'undefined' ) {
       console.log('body:', body.images[0].faces);
       console.log('gender:', body.images[0].faces[0].attributes.gender);
       io.sockets.emit('data', body);
+    } else {
+      io.sockets.emit('data', {err: "Sorry, no results found"});
     }
   });
 }
