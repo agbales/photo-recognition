@@ -1,3 +1,11 @@
+html {
+  font-family: 'Questrial', sans-serif;
+}
+
+/*h1, h2, h3, h4, h5 {
+  font-family: 'Kumar One Outline', cursive;
+}*/
+
 .center-block {
     display: block;
     margin-left: auto;
