@@ -5,6 +5,8 @@ const server = app.listen(port);
 var io = require('socket.io').listen(server);
 const request = require('request');
 const config = require('./config.js')
+const APP_ID = process.env.APP_ID || config.APP_ID;
+const APP_KEY = process.env.APP_KEY || config.APP_KEY;
 
 app.use(express.static('public'));
 
@@ -29,8 +31,8 @@ function kairosDetect(params){
     url: 'http://api.kairos.com/detect',
     dataType: "application/json",
     headers: {
-      app_id: config.APP_ID,
-      app_key: config.APP_KEY
+      app_id: APP_ID,
+      app_key: APP_KEY
     },
     json: true,
     body: params
