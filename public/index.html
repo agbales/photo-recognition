@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Kiaros</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-  <p>Profile Pic Info</p>
-  <form id = "url-submit-form" action = "">
-    <input type="text" placeholder="submit photo url..." id="input"><br>
-    <input type="submit" value="Submit">
-  </form>
-  <div id="info"></div>
+  <div class="container">
+    <p>Profile Pic Info</p>
+    <form id = "url-submit-form">
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <input type="text" placeholder="photo url" class="form-control input-lg" id="input">
+        </div>
+        <div class="col-sm-2">
+          <input type="submit" value="Submit" class="btn btn-default btn-sm">
+        </div>
+      </div>
+    </form>
+    <div id="info"></div>
+  </div>
 </body>
 
 <script src="index.js" type="text/javascript"></script>
