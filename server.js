@@ -29,8 +29,8 @@ function kairosDetect(params){
     url: 'http://api.kairos.com/detect',
     dataType: "application/json",
     headers: {
-      app_id: config.app_id,
-      app_key: config.app_key
+      app_id: config.APP_ID,
+      app_key: config.APP_KEY
     },
     json: true,
     body: params
