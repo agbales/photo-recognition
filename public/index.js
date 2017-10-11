@@ -2,8 +2,9 @@ $(document).ready(function(){
   var socket = io.connect();
 
   socket.on('data', function(msg) {
-    $('#info').html('<img src="' + msg.uploaded_image_url + '" width="300px">');
+    $('#photo').html('<img src="' + msg.uploaded_image_url + '" width="300px" class="center-block">');
 
+    $('#info').empty();
     var attributes = msg.images[0].faces[0].attributes;
     for (var prop in attributes) {
       if (prop == "gender") {
@@ -14,7 +15,6 @@ $(document).ready(function(){
         $('#info').append($('<div>').text(info));
       }
     }
-
   });
 
   $('#url-submit-form').submit(function() {
