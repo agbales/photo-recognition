@@ -8,7 +8,7 @@ const config = require('./config.js')
 const APP_ID = process.env.APP_ID || config.APP_ID;
 const APP_KEY = process.env.APP_KEY || config.APP_KEY;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 io.sockets.on('connection', function(socket) {
   console.log('Client connected: ' + socket.id);
