@@ -39,8 +39,8 @@ function kairosDetect(params){
   };
 
   request.post(options, function (error, response, body) {
+    
     if (typeof body.images[0] != 'undefined' ) {
-
       var msg = {}
       msg.uploaded_image_url = params.image;
       msg.body = body;
