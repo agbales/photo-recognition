@@ -42,9 +42,13 @@ function kairosDetect(params){
     console.log('error:', error);
     console.log('statusCode:', response && response.statusCode);
     if (typeof body.images[0] != 'undefined' ) {
-      console.log('body:', body.images[0].faces);
-      console.log('gender:', body.images[0].faces[0].attributes.gender);
-      io.sockets.emit('data', body);
+      var msg = {}
+      msg.uploaded_image_url = params.image;
+      msg.body = body;
+      console.log(msg);
+      // console.log('body:', body.images[0].faces);
+      // console.log('gender:', body.images[0].faces[0].attributes.gender);
+      io.sockets.emit('data', msg);
     } else {
       io.sockets.emit('data', {err: "Sorry, no results found"});
     }
