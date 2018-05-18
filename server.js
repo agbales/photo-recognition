@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 const server = app.listen(port);
 var io = require('socket.io').listen(server);
 const request = require('request');
-const config = require('./config.js')
+// const config = require('./config.js');
 const APP_ID = process.env.APP_ID || config.APP_ID;
 const APP_KEY = process.env.APP_KEY || config.APP_KEY;
 
