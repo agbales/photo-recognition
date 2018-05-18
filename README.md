@@ -1,6 +1,6 @@
 ## Demographic Profile Picture Data
 
-This project uses the Kairos API to provide demographic data predictions for face photos at a user-provided URL. Find the project over at [Heroku](https://hey-but-what-about.herokuapp.com/)
+This project uses the Kairos API to provide demographic data predictions for face photos at a user-provided URL. Find the project over at [Heroku](https://kairos-photo-recognition.herokuapp.com/)
 
 
 For example, this URL:
